@@ -1,0 +1,21 @@
+git add . // it will add everything that changed ready for push in all documents
+
+git add EX: single file // it will add the file ready for push
+
+git commit -m " EX: comment i sent" //this is to send a message to change your code on github
+
+git push origin main // this will fully push your change on github
+
+git status // this will check your change before pushing it to github 
+
+
+
+
+
+
+
+
+
+
+
+
