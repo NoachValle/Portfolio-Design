@@ -1,9 +1,9 @@
 
 const frontpage = () => {
     return (
-        <div className="flex max-w-screen-xl flex-col md:flex-row md:h-[80vh]">
+        <div className="flex max-w-screen-xl flex-col md:flex-row md:h-[80vh] ">
             <div className="flex items-center justify-evenly text-black p-4">
-                <div className="">
+                <div>
                     <h1 className="text-[#dc6601] text-2xl">Hello</h1>
                     <p className="py-3 text-3xl">I'm Isobelle Holden a Software Engineer</p>
                     <p className="py-3">
@@ -21,7 +21,10 @@ const frontpage = () => {
                 </div>
 
             </div>
+       
             <img className=" object-scale-down md:object-contain " src="https://t4.ftcdn.net/jpg/08/96/79/59/360_F_896795991_lMjObSd1wkyc3iWXOD23R6GW08MOnc3i.jpg" />
+        
+            
         </div>
 
     );
