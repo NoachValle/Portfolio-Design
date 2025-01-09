@@ -3,8 +3,12 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "../../Components/header";
 import Footer from "../../Components/footer";
+import { Nunito  } from 'next/font/google'
 
-
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["500"],
+});
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -29,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-900`}
+        className={`${nunito.className} ${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-900`}
       >
         <Header/>
         {children}
