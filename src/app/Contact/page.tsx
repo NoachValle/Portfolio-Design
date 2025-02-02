@@ -1,13 +1,22 @@
+"use client";
+import { useActionState } from "react";
+import receiveFormData from "../actions/receiveFormData";
 
+const initialState = {
+    message: '',
+    error_message: "",
+}
 const Contact = () => {
+    const [state, formAction, pending] = useActionState(receiveFormData, initialState);
     return (
         <div className="bg-white flex justify-evenly items-center text-black">
             <div className=" bg-white flex max-w-screen-xl flex-col md:h-[80vh] md:flex-row">
                 <section className="bg-white ">
                     <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+                        <h3 className=" bg-orange-500 text-center text-2xl  rounded">{state.message}</h3>
                         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center ">Contact Me </h2>
                         <p className="mb-7 lg:mb-16 font-light text-center sm:text-xl"> Need someone to hire for your website, or design something Contact me. Let me know.</p>
-                        <form action="#" className="space-y-8">
+                        <form action={formAction} className="space-y-8">
                             <div>
                                 <label className="block mb-2 text-sm font-medium ">Your email</label>
                                 <input type="email" id="email" className="shadow-sm border text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-black dark:placeholder-bg-white dark:text-white  dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@example.com" ></input>
